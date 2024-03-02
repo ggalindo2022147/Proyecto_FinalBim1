@@ -5,12 +5,13 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
-
+import adminRoutes from '../src/admin/admin.routes.js';
 
 class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
+        this.adminPath = '/onlineSales/v2/admin';
 
         this.middlewares();
         this.conectarDB();
@@ -30,7 +31,8 @@ class Server{
     }
 
     routes(){
-    
+        console.log('Routes', this.adminPath);
+        this.app.use(this.adminPath, adminRoutes);
     }
 
     listen(){
