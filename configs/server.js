@@ -5,12 +5,14 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
+import authRoutes from '../src/auth/auth.routes.js';
 import adminRoutes from '../src/admin/admin.routes.js';
 
 class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
+        this.authPath = '/onlineSales/v2/auth';
         this.adminPath = '/onlineSales/v2/admin';
 
         this.middlewares();
@@ -31,7 +33,7 @@ class Server{
     }
 
     routes(){
-        console.log('Routes', this.adminPath);
+        this.app.use(this.authPath, authRoutes);
         this.app.use(this.adminPath, adminRoutes);
     }
 
