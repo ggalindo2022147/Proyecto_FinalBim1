@@ -40,4 +40,3 @@ ProductSchema.methods.toJSON = function(){
 
 export default mongoose.model('Product', ProductSchema);
 
-//arreglando bug

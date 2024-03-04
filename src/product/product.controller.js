@@ -43,3 +43,13 @@ export const getProductByNombre = async (req = request, res = response) => {
     }
 }
 
+
+export const productDelete = async (req = request, res = response) => {
+    const { id } = req.params;
+
+    const product = await Product.findByIdAndUpdate(id, { estado: false});
+    const ProductSchema = req.product;
+
+    res.status(200).json({msg: 'user to delete', product, product});
+}
+
