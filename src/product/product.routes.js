@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { postProduct, getProducts } from "./product.controller.js";
+import { postProduct, getProducts, getProductByNombre } from "./product.controller.js";
 import { validarCampos } from "../middlewares/validate-fields.js";
 import { validarJWT } from "../middlewares/validate-jwt.js";
 
@@ -18,5 +18,7 @@ router.post(
     ], postProduct);
 
 router.get("/", getProducts);
+
+router.get("/:nombre", getProductByNombre);
 
 export default router;

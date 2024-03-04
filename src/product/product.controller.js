@@ -25,3 +25,21 @@ export const getProducts = async (req = request, res = response) => {
         products
     });
 }
+
+export const getProductByNombre = async (req = request, res = response) => {
+    const { nombre } = req.params;
+
+    const product = await Product.findOne({ nombre });
+
+    if (!product) {
+        return res.status(400).json({
+            msg: `The product ${nombre} does not exist`
+        });
+    } else {
+        res.status(200).json({
+            msg: "Product found",
+            product
+        });
+    }
+}
+
