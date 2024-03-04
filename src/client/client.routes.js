@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { postAdmin } from "./admin.controller.js";
+import { postClient } from "./client.controller.js";
 import { validarCampos } from "../middlewares/validate-fields.js";
 import { existenteEmail } from "../helpers/db-validator.js";
 
@@ -15,6 +15,7 @@ router.post(
         check("email").custom(existenteEmail),
         check("password", "The password is required").isLength({ min: 6 }),
         validarCampos,
-    ], postAdmin);
+    ], postClient);
+
 
 export default router;

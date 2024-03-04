@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "coleccionRegistrarCliente",
+    "dateExported": "2024-03-04T14:36:44.287Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0d84d9d7-ce3c-443d-88a8-dce9605ef655",
+            "colId": "2f567a30-ea76-4bca-915c-0eb97008fc2d",
+            "containerId": "",
+            "name": "post registrarCliente",
+            "url": "http://localhost:3000/onlineSales/v2/client",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T14:23:29.560Z",
+            "modified": "2024-03-04T14:26:36.457Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Yojhitan\",\n  \"apellido\": \"Stanaley\",\n  \"email\": \"ygarcia@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -3,12 +3,9 @@ import bcriptjs from "bcryptjs";
 import Admin from "./admin.model.js";
 
 export const postAdmin = async (req = request, res = response) => {
-    console.log("hola");
     const { nombre, apellido, email, password } = req.body;
     const admin = new Admin({ nombre, apellido, email, password });
     
-    console.log(admin);
-
     const salt = bcriptjs.genSaltSync();
     admin.password = bcriptjs.hashSync(password, salt);
     

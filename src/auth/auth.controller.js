@@ -1,17 +1,23 @@
 import bcryptjs from 'bcryptjs';
 import Admin from '../admin/admin.model.js'
+import Client from '../client/client.model.js';
 import { generarJWT } from '../helpers/generate-jwt.js';
 
 export const usuarioLogin = async (req, res) => {
-    const { correo, password } = req.body;
+    const { email, password } = req.body;
 
     try {
-        const usuario = await Admin.findOne({ correo });
+        let usuario = await Admin.findOne({ email });
 
+        console.log(usuario);
         if (!usuario) {
-            return res.status(400).json({
-                msg: "Credenciales incorrectos, correo no existe en la base de datos"
-            });
+            usuario = await Client.findOne({ email });
+            console.log(usuario);
+            if (!usuario) {
+                return res.status(400).json({
+                    msg: "Credenciales incorrectos, correo no existe en la base de datos"
+                });
+            }    
         }
 
         if (!usuario.estado) {
