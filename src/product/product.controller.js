@@ -43,4 +43,15 @@ export const getProductByNombre = async (req = request, res = response) => {
     }
 }
 
+export const productsGet = async (req, res) => {
+    const products = await Product.find({estado: true});
+    const total = await Product.countDocuments({estado: true});
+    res.status(200).json({
+        msg: "ccc",
+        total,
+        products
+    });
+};
+
+
 
