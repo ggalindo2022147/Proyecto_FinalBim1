@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "coleccionProductosAdmin",
+    "dateExported": "2024-03-05T22:45:53.941Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "99bb4011-efc6-4ef6-a470-99f069f0cbd5",
+            "colId": "c67852ab-17f5-47ad-ab68-3a2931459830",
+            "containerId": "",
+            "name": "post agregarProducto",
+            "url": "http://localhost:3000/onlineSales/v2/product",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-05T22:28:37.456Z",
+            "modified": "2024-03-05T22:28:37.456Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZDIwZWVlOWViNDJjYjhlODk3ZTciLCJpYXQiOjE3MDk1Njc1NTEsImV4cCI6MTcwOTU5NjM1MX0.l_23G1jKiKvlrRFel6sVhPlNoAnL0JbQhJgbTt-pEHk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"aguacate\",\n  \"descripcion\": \"Un rico aguacate de tecpán\",\n  \"precio\": 18.24,\n  \"stock\": 85\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c564fa3c-2ac1-4115-bba7-429bdc04c2bf",
+            "colId": "c67852ab-17f5-47ad-ab68-3a2931459830",
+            "containerId": "",
+            "name": "get catalogoProductos",
+            "url": "http://localhost:3000/onlineSales/v2/product",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-05T22:28:37.457Z",
+            "modified": "2024-03-05T22:28:37.457Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9e2fad55-e0bb-4ab3-9298-57f85c8b3bd4",
+            "colId": "c67852ab-17f5-47ad-ab68-3a2931459830",
+            "containerId": "",
+            "name": "get buscarProducto",
+            "url": "http://localhost:3000/onlineSales/v2/product/aguacate",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-05T22:28:37.458Z",
+            "modified": "2024-03-05T22:28:37.458Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6ed7cf56-5206-43c2-ac43-e9c016802332",
+            "colId": "c67852ab-17f5-47ad-ab68-3a2931459830",
+            "containerId": "",
+            "name": "get inventarioProductos",
+            "url": "http://localhost:3000/onlineSales/v2/product",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-05T22:28:57.487Z",
+            "modified": "2024-03-05T22:29:02.672Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
