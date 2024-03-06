@@ -1,59 +1,121 @@
 {
     "client": "Thunder Client",
     "collectionName": "coleccionProductosAdmin",
-    "dateExported": "2024-03-04T16:49:05.314Z",
+    "dateExported": "2024-03-06T23:03:09.154Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "50fb808c-0365-4dd1-a873-d1e2e37203e7",
-            "colId": "af7039da-e3c2-4eae-8403-9706b09a9c5b",
+            "_id": "cc0821b9-83ee-4be9-bc99-08816363ad2f",
+            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
             "containerId": "",
             "name": "post agregarProducto",
             "url": "http://localhost:3000/onlineSales/v2/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-04T15:50:06.829Z",
-            "modified": "2024-03-04T15:52:49.288Z",
+            "created": "2024-03-04T20:14:18.572Z",
+            "modified": "2024-03-04T21:44:17.644Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZDIwZWVlOWViNDJjYjhlODk3ZTciLCJpYXQiOjE3MDk1Njc1NTEsImV4cCI6MTcwOTU5NjM1MX0.l_23G1jKiKvlrRFel6sVhPlNoAnL0JbQhJgbTt-pEHk"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NDAzYjIzMDRiZDI1NjU0ZmUwNmQiLCJpYXQiOjE3MDk1ODg2MDAsImV4cCI6MTcwOTYxNzQwMH0.55S4LoCW7LklBDdKUDGJ6zNdJP_Fs1p2yaDHldBrmmo"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"aguacate\",\n  \"descripcion\": \"Un rico aguacate de tecpán\",\n  \"precio\": 18.24,\n  \"stock\": 85\n}",
+                "raw": "{\n  \"nombre\": \"shucos\",\n  \"descripcion\": \"Es saludable\",\n  \"precio\": 50.24,\n  \"stock\": 30\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "37927801-7a48-4adc-9fb8-c5feffb61eb0",
-            "colId": "af7039da-e3c2-4eae-8403-9706b09a9c5b",
+            "_id": "b02d4755-7b40-48e8-996f-ddb50eaba66f",
+            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
             "containerId": "",
             "name": "get catalogoProductos",
             "url": "http://localhost:3000/onlineSales/v2/product",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-04T15:58:01.200Z",
-            "modified": "2024-03-04T15:58:26.437Z",
+            "created": "2024-03-04T20:14:18.574Z",
+            "modified": "2024-03-04T20:14:18.574Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "ac94fa81-3cab-4ad9-84ce-a467bb099ad0",
-            "colId": "af7039da-e3c2-4eae-8403-9706b09a9c5b",
+            "_id": "14c86da1-73e6-4c85-afde-77d35d49d378",
+            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
             "containerId": "",
             "name": "get buscarProducto",
             "url": "http://localhost:3000/onlineSales/v2/product/aguacate",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-04T16:05:49.844Z",
-            "modified": "2024-03-04T16:09:39.772Z",
+            "created": "2024-03-04T20:14:18.575Z",
+            "modified": "2024-03-04T20:14:18.575Z",
             "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2349475d-0dcc-4393-9718-38a6d0b88036",
+            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "containerId": "",
+            "name": "get inventarioProducto",
+            "url": "http://localhost:3000/onlineSales/v2/product/inventory/listar",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-06T20:46:19.020Z",
+            "modified": "2024-03-06T22:33:19.794Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NDAzYjIzMDRiZDI1NjU0ZmUwNmQiLCJpYXQiOjE3MDk3NjQzNDAsImV4cCI6MTcwOTc5MzE0MH0.0m16O0Yab4FyPJOeSDiKt_NlFXkOStZMJQGIfbdjwIc"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b449e60e-742c-45de-82ea-c49aeeb96c88",
+            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "containerId": "",
+            "name": "put Productos",
+            "url": "http://localhost:3000/onlineSales/v2/product/65e632fb2304bd25654fe03d",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-06T22:50:45.819Z",
+            "modified": "2024-03-06T22:54:04.093Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NDAzYjIzMDRiZDI1NjU0ZmUwNmQiLCJpYXQiOjE3MDk3NjQzNDAsImV4cCI6MTcwOTc5MzE0MH0.0m16O0Yab4FyPJOeSDiKt_NlFXkOStZMJQGIfbdjwIc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"shucos\",\n  \"descripcion\": \"Es saludable\",\n  \"precio\": 50.24,\n  \"stock\": 30\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "85e0e74e-b166-4d45-a838-12e1e9813979",
+            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "containerId": "",
+            "name": "delete productos",
+            "url": "http://localhost:3000/onlineSales/v2/product/65e632fb2304bd25654fe03d",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-03-06T22:58:38.902Z",
+            "modified": "2024-03-06T23:01:05.007Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NDAzYjIzMDRiZDI1NjU0ZmUwNmQiLCJpYXQiOjE3MDk3NjQzNDAsImV4cCI6MTcwOTc5MzE0MH0.0m16O0Yab4FyPJOeSDiKt_NlFXkOStZMJQGIfbdjwIc"
+                }
+            ],
             "params": [],
             "tests": []
         }

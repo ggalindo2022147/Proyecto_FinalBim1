@@ -1,5 +1,6 @@
 import { request, response } from "express";
 import Product from "./product.model.js";
+import Admin from "../admin/admin.model.js";
 
 export const postProduct = async (req = request, res = response) => {
     const { nombre, descripcion, precio, stock } = req.body;
@@ -56,7 +57,48 @@ export const getProductsInventory = async (req = request, res = response) => {
     }
 }
 
+export const putProduct = async (req = request, res = response) => {
+    const { id } = req.params;
+    const admin = req.admin._id;
+    const { estado, nombre, descripcion, ...resto } = req.body;
 
+    const adminResult = await Admin.findById(admin);
+
+    if (!adminResult || adminResult.role !== "ADMIN_ROLE") {
+        return res.status(400).json({
+            msg: "The admin does not exist or is not authorized"
+        });
+    } else {
+        const product = await Product.findByIdAndUpdate(id, resto);
+        const productUpdate = await Product.findOne({ _id: id });
+
+        res.status(200).json({
+            msg: "Product updated",
+            productUpdate
+        });
+    }
+}
+
+export const deleteProduct = async (req = request, res = response) => {
+    const { id } = req.params;
+    const admin = req.admin._id;
+
+    const adminResult = await Admin.findById(admin);
+
+    if (!adminResult || adminResult.role !== "ADMIN_ROLE") {
+        return res.status(400).json({
+            msg: "The admin does not exist or is not authorized"
+        });
+    } else {
+        const product = await Product.findByIdAndUpdate(id, { estado: false });
+        const productUpdate = await Product.findOne({ _id: id });
+
+        res.status(200).json({
+            msg: "Product deleted",
+            productUpdate
+        });
+    }
+}
 
 
 export const getProductByNombre = async (req = request, res = response) => {
