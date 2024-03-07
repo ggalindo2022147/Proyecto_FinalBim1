@@ -1,24 +1,24 @@
 {
     "client": "Thunder Client",
     "collectionName": "coleccionProductosAdmin",
-    "dateExported": "2024-03-06T23:03:09.154Z",
+    "dateExported": "2024-03-07T07:16:41.563Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "cc0821b9-83ee-4be9-bc99-08816363ad2f",
-            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "_id": "98c43207-4c4f-488c-9cf7-2771bc066055",
+            "colId": "b9f99926-00c8-4da2-99a8-da313f66f7d3",
             "containerId": "",
             "name": "post agregarProducto",
             "url": "http://localhost:3000/onlineSales/v2/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-04T20:14:18.572Z",
-            "modified": "2024-03-04T21:44:17.644Z",
+            "created": "2024-03-07T07:10:42.311Z",
+            "modified": "2024-03-07T07:14:52.271Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NDAzYjIzMDRiZDI1NjU0ZmUwNmQiLCJpYXQiOjE3MDk1ODg2MDAsImV4cCI6MTcwOTYxNzQwMH0.55S4LoCW7LklBDdKUDGJ6zNdJP_Fs1p2yaDHldBrmmo"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4N2FlNzI0ZWM0M2E2YjFiNGFkMmYiLCJpYXQiOjE3MDk3OTU2ODEsImV4cCI6MTcwOTgyNDQ4MX0.GUWoVThAREuxTaGxdR0p8IR53VDnmWBMDtqzlFjRi98"
                 }
             ],
             "params": [],
@@ -27,46 +27,47 @@
                 "raw": "{\n  \"nombre\": \"shucos\",\n  \"descripcion\": \"Es saludable\",\n  \"precio\": 50.24,\n  \"stock\": 30\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "b02d4755-7b40-48e8-996f-ddb50eaba66f",
-            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "_id": "dbea3b83-3b3e-4bd8-ba3c-75b112d580aa",
+            "colId": "b9f99926-00c8-4da2-99a8-da313f66f7d3",
             "containerId": "",
             "name": "get catalogoProductos",
             "url": "http://localhost:3000/onlineSales/v2/product",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-04T20:14:18.574Z",
-            "modified": "2024-03-04T20:14:18.574Z",
+            "created": "2024-03-07T07:10:42.312Z",
+            "modified": "2024-03-07T07:10:42.312Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "14c86da1-73e6-4c85-afde-77d35d49d378",
-            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "_id": "bdfee2a0-9eee-434c-8605-c8fa4520f745",
+            "colId": "b9f99926-00c8-4da2-99a8-da313f66f7d3",
             "containerId": "",
             "name": "get buscarProducto",
             "url": "http://localhost:3000/onlineSales/v2/product/aguacate",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-04T20:14:18.575Z",
-            "modified": "2024-03-04T20:14:18.575Z",
+            "created": "2024-03-07T07:10:42.313Z",
+            "modified": "2024-03-07T07:10:42.313Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "2349475d-0dcc-4393-9718-38a6d0b88036",
-            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "_id": "ee5a6a1c-0a5f-4d49-8556-6e91f7a47702",
+            "colId": "b9f99926-00c8-4da2-99a8-da313f66f7d3",
             "containerId": "",
             "name": "get inventarioProducto",
             "url": "http://localhost:3000/onlineSales/v2/product/inventory/listar",
             "method": "GET",
             "sortNum": 40000,
-            "created": "2024-03-06T20:46:19.020Z",
-            "modified": "2024-03-06T22:33:19.794Z",
+            "created": "2024-03-07T07:10:42.314Z",
+            "modified": "2024-03-07T07:10:42.314Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -77,15 +78,15 @@
             "tests": []
         },
         {
-            "_id": "b449e60e-742c-45de-82ea-c49aeeb96c88",
-            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "_id": "0682fa38-82c6-4350-8b4a-c524f1092cb5",
+            "colId": "b9f99926-00c8-4da2-99a8-da313f66f7d3",
             "containerId": "",
             "name": "put Productos",
             "url": "http://localhost:3000/onlineSales/v2/product/65e632fb2304bd25654fe03d",
             "method": "PUT",
             "sortNum": 50000,
-            "created": "2024-03-06T22:50:45.819Z",
-            "modified": "2024-03-06T22:54:04.093Z",
+            "created": "2024-03-07T07:10:42.315Z",
+            "modified": "2024-03-07T07:10:42.315Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -101,21 +102,35 @@
             "tests": []
         },
         {
-            "_id": "85e0e74e-b166-4d45-a838-12e1e9813979",
-            "colId": "46c28c6a-f0fd-4a32-bdcd-8cb9e4598126",
+            "_id": "4274f55b-8a99-4bbb-8049-b9c3a9f744ae",
+            "colId": "b9f99926-00c8-4da2-99a8-da313f66f7d3",
             "containerId": "",
             "name": "delete productos",
             "url": "http://localhost:3000/onlineSales/v2/product/65e632fb2304bd25654fe03d",
             "method": "DELETE",
             "sortNum": 60000,
-            "created": "2024-03-06T22:58:38.902Z",
-            "modified": "2024-03-06T23:01:05.007Z",
+            "created": "2024-03-07T07:10:42.316Z",
+            "modified": "2024-03-07T07:10:42.316Z",
             "headers": [
                 {
                     "name": "x-token",
                     "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NDAzYjIzMDRiZDI1NjU0ZmUwNmQiLCJpYXQiOjE3MDk3NjQzNDAsImV4cCI6MTcwOTc5MzE0MH0.0m16O0Yab4FyPJOeSDiKt_NlFXkOStZMJQGIfbdjwIc"
                 }
             ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "809f803e-a005-4105-8117-bc2d254a73ca",
+            "colId": "b9f99926-00c8-4da2-99a8-da313f66f7d3",
+            "containerId": "",
+            "name": "get bestSellingProducts",
+            "url": "http://localhost:3000/onlineSales/v2/product/show/bestSellingProducts",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-03-07T07:12:39.001Z",
+            "modified": "2024-03-07T07:14:28.739Z",
+            "headers": [],
             "params": [],
             "tests": []
         }

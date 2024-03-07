@@ -27,6 +27,29 @@ export const getProducts = async (req = request, res = response) => {
     });
 }
 
+export const getShowMostSoldProducts = async (req, res) => {
+    try {
+        const mostSoldAvailableProducts = await Product.find({ estado: true, contadorVentas: { $gt: 0 } })
+            .sort({ timesBought: -1 })
+            .limit(10);
+
+        if (mostSoldAvailableProducts.length === 0) {
+            return res.status(404).json({
+                msg: "No products have been sold yet or there are no matches."
+            });
+        }
+
+        res.status(200).json({
+            msg: "Best selling products",
+            products: mostSoldAvailableProducts
+        });
+    } catch (error) {
+        res.status(500).json({
+            error: error.message
+        });
+    }
+};
+
 export const getProductsInventory = async (req = request, res = response) => {
     const query = { estado: true };
     const query2 = { estado: false };
