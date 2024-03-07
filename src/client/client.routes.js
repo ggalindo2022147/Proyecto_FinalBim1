@@ -3,6 +3,9 @@ import { check } from "express-validator";
 import { postClient } from "./client.controller.js";
 import { validarCampos } from "../middlewares/validate-fields.js";
 import { existenteEmail } from "../helpers/db-validator.js";
+import {getShowMostSoldProducts, getProductByNombre} from "../product/product.controller.js";
+import { getCategories } from "../category/category.controller.js";
+
 
 const router = Router();
 
@@ -17,5 +20,12 @@ router.post(
         validarCampos,
     ], postClient);
 
+router.get("/", getShowMostSoldProducts);
+
+router.get("/:nombre", getProductByNombre);
+
+router.get("/categories/listar", getCategories);
+
+router.get("/categories/buscar/:name", getProductByNombre);
 
 export default router;

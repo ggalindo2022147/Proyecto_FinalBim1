@@ -50,6 +50,33 @@ export const getCategories = async (req = request, res = response) => {
     });
 }
 
+export const getCategoriesByNombre = async (req = request, res = response) => {
+    const { name } = req.body;
+
+    const category = await Category.findOne({ name });
+
+    if (!category) {
+        return res.status(400).json({
+            msg: "The category does not exist"
+        });
+    } else {
+        res.status(200).json({
+            msg:"product found in db",
+            category
+        });
+    }
+
+    const [total, categories] = await Promise.all([
+        Category.countDocuments(query),
+        Category.find(query)
+    ]);
+
+    res.status(200).json({
+        total,
+        categories
+    });
+}
+
 export const putCategory = async (req = request, res = response) => {
     const { id } = req.params; 
     const { name } = req.body; 
