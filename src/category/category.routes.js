@@ -1,14 +1,17 @@
-import mongoose from "mongoose";
+import { Router } from "express";
+import { check } from "express-validator";
+import { postCategory } from "./category.controller.js";
+import { validarCampos } from "../middlewares/validate-fields.js";
+import { validarJWT } from "../middlewares/validate-jwt.js";
 
-const CategorySchema = mongoose.Schema({ 
-    nombre:{ 
-        type: String, 
-        required: true 
-    }, 
-    estado:{ 
-        type: Boolean, 
-        default: true 
-    }
-});
+const router = Router();
 
-export default mongoose.model('Category', CategorySchema);
+router.post(
+    "/",
+    [
+        validarJWT,
+        check("name", "The name is required").not().isEmpty(),
+        validarCampos,
+    ], postCategory);
+
+export default router;

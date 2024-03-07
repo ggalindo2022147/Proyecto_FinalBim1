@@ -1,9 +1,24 @@
 import mongoose from "mongoose";
-const CategorySchema = mongoose.Schema({ nombre: { type: String, required: true }, estado: { type: Boolean, default: true } });
-export default mongoose.model('Category', CategorySchema);
+import Category from "./category.model.js";
+
+export const categoryDefault = async (res) => {
+
+    const category = await Category.findOne({ name: "Default" });
+
+    if (category) {
+        console.log("Category already exists");
+    } else {
+        const newCategory = new Category({
+            name: "Default",
+        });
+
+        await newCategory.save();
+    }
+}
 
 export const postCategory = async (req = request, res = response) => {
-    const { nombre } = req.body; const admin = req.admin.role;
+    const { name } = req.body; 
+    const admin = req.admin.role;
 
     if (admin !== "ADMIN_ROLE") {
         return res.status(400).json({
@@ -11,7 +26,7 @@ export const postCategory = async (req = request, res = response) => {
         });
     } else {
 
-        const category = new Category({ nombre });
+        const category = new Category({ name });
 
         await category.save();
 
@@ -22,7 +37,7 @@ export const postCategory = async (req = request, res = response) => {
 }
 
 export const getCategories = async (req = request, res = response) => {
-    const query = { estado: true };
+    const query = { state: true };
 
     const [total, categories] = await Promise.all([
         Category.countDocuments(query),
@@ -36,14 +51,16 @@ export const getCategories = async (req = request, res = response) => {
 }
 
 export const putCategory = async (req = request, res = response) => {
-    const { id } = req.params; const { nombre } = req.body; const admin = req.admin.role;
+    const { id } = req.params; 
+    const { name } = req.body; 
+    const admin = req.admin.role;
 
     if (admin !== "ADMIN_ROLE") {
         return res.status(400).json({
             msg: "The admin is not authorized"
         });
     } else {
-        const category = await Category.findByIdAndUpdate(id, { nombre });
+        const category = await Category.findByIdAndUpdate(id, { name });
         const categoryResult = await Category.findById(id);
 
         res.status(200).json({
@@ -60,16 +77,16 @@ export const deleteCategory = async (req = request, res = response) => {
             msg: "The admin is not authorized"
         });
     } else {
-        let categoryDefault = await Category.findOne({ nombre: "Default" });
+        let categoryDefault = await Category.findOne({ name: "Default" });
 
         if (!categoryDefault) {
-            categoryDefault = new Category({ nombre: "Default" });
+            categoryDefault = new Category({ name: "Default" });
             await categoryDefault.save();
         }
 
         await Product.updateMany({ categoria: id }, { categoria: categoryDefault._id });
 
-        const category = await Category.findByIdAndUpdate(id, { estado: false });
+        const category = await Category.findByIdAndUpdate(id, { state: false });
         const categoryResult = await Category.findById(id);
 
         res.status(200).json({
