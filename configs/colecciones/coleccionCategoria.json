@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "coleccionCategoria",
-    "dateExported": "2024-03-07T23:29:33.968Z",
+    "dateExported": "2024-03-08T01:49:18.183Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "6f4c8e8f-c69d-4208-bcd9-0f7b1b70ccb9",
-            "colId": "8ec6ae45-0bb6-4009-a72e-daae7ea6c4e2",
+            "_id": "34cb9a82-d7e8-4780-8c2f-99dd383f2e26",
+            "colId": "d8af0dcb-5e4e-404f-a702-7a651b28c017",
             "containerId": "",
             "name": "post agregarCategoria",
             "url": "http://localhost:3000/onlineSales/v2/category",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-07T17:02:43.590Z",
-            "modified": "2024-03-07T20:25:46.654Z",
+            "created": "2024-03-08T01:45:01.614Z",
+            "modified": "2024-03-08T01:45:01.614Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -27,7 +27,58 @@
                 "raw": "{\n  \"name\": \"aguas\"\n}",
                 "form": []
             },
-            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "d340e51e-64e5-4cf8-ac7a-2bbc578a83b8",
+            "colId": "d8af0dcb-5e4e-404f-a702-7a651b28c017",
+            "containerId": "",
+            "name": "get",
+            "url": "http://localhost:3000/onlineSales/v2/category",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T01:45:50.002Z",
+            "modified": "2024-03-08T01:45:50.002Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d413a1f6-b22f-4d98-9002-7db6fd999298",
+            "colId": "d8af0dcb-5e4e-404f-a702-7a651b28c017",
+            "containerId": "",
+            "name": "put",
+            "url": "http://localhost:3000/onlineSales/v2/category/65ea60d0d3e994082749e8b0",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-08T01:45:57.446Z",
+            "modified": "2024-03-08T01:45:57.446Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTU2MGM3MTdkNWI3YjBmZDdiOWIiLCJpYXQiOjE3MDk4NjEwNTcsImV4cCI6MTcwOTg4OTg1N30.u-xuU5oiKDtJdS6DGBxRWVpMbkX7g-Dl0IjjSqgEzAo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Comida\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "de8efa13-6b82-48f6-8ac5-2af19a28e155",
+            "colId": "d8af0dcb-5e4e-404f-a702-7a651b28c017",
+            "containerId": "",
+            "name": "delete categorias",
+            "url": "http://localhost:3000/onlineSales/v2/category/65ea68e9d3e994082749e8eb",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-08T01:46:00.052Z",
+            "modified": "2024-03-08T01:46:00.052Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]
