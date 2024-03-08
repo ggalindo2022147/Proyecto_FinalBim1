@@ -1,0 +1,84 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "coleccionClientes",
+    "dateExported": "2024-03-08T01:41:01.040Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "edbd4731-ace6-4f3a-8b79-50e8e5c2c181",
+            "colId": "37426113-1651-49d2-9106-b0f6de202c3f",
+            "containerId": "",
+            "name": "post cliente",
+            "url": "http://localhost:3000/onlineSales/v2/client",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-08T00:49:21.620Z",
+            "modified": "2024-03-08T00:51:33.823Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Yojhitan\",\n  \"apellido\": \"Stanaley\",\n  \"email\": \"ygarcia@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bec23f3c-3b73-43e8-8f8e-0b3613f8ffd4",
+            "colId": "37426113-1651-49d2-9106-b0f6de202c3f",
+            "containerId": "",
+            "name": "get buscarCliente",
+            "url": "http://localhost:3000/onlineSales/v2/client/categories/buscar/pizzita",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2024-03-08T00:58:37.625Z",
+            "modified": "2024-03-08T01:11:23.775Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e1118011-db86-4123-aeb1-7562213ae9d0",
+            "colId": "37426113-1651-49d2-9106-b0f6de202c3f",
+            "containerId": "",
+            "name": "get listar",
+            "url": "http://localhost:3000/onlineSales/v2/client/categories/listar",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-08T00:51:58.879Z",
+            "modified": "2024-03-08T01:08:39.494Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "61704468-48aa-4ee0-932b-f0f2b5fdb968",
+            "colId": "37426113-1651-49d2-9106-b0f6de202c3f",
+            "containerId": "",
+            "name": "get show",
+            "url": "http://localhost:3000/onlineSales/v2/client/pizzita",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2024-03-08T01:12:20.220Z",
+            "modified": "2024-03-08T01:15:10.415Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9ac96af8-7598-4731-9da5-7a915ca52ce8",
+            "colId": "37426113-1651-49d2-9106-b0f6de202c3f",
+            "containerId": "",
+            "name": "getProductByNombre",
+            "url": "http://localhost:3000/onlineSales/v2/client",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-08T01:14:19.727Z",
+            "modified": "2024-03-08T01:15:16.085Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
